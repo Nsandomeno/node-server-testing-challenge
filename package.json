@@ -30,6 +30,7 @@
   "dependencies": {
     "cross-env": "^7.0.0",
     "express": "^4.17.1",
-    "knex": "^0.20.10"
+    "knex": "^0.20.10",
+    "sqlite3": "^4.1.1"
   }
 }

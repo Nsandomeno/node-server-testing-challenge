@@ -4,7 +4,8 @@ module.exports = {
     // helper functions
     getUsers,
     addUser,
-    remove
+    remove,
+    findById
 }
 
 function getUsers() {
@@ -23,6 +24,12 @@ function addUser(user) {
 function remove(id) {
     return db('users')
         .delete()
+        .where({ id })
+}
+
+function findById(id) {
+    return db('users')
+        .select('id', 'username')
         .where({ id })
 }
 
